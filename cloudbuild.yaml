@@ -79,7 +79,7 @@ steps:
       - 'managed'
 
 substitutions:
-  _INSTANCE_NAME: main-db
+  _INSTANCE_NAME: main-mysql-db
   _REGION: asia-northeast1
   _SERVICE_NAME: polls-service
   _SECRET_SETTINGS_NAME: django_settings
