@@ -77,11 +77,18 @@ steps:
       - '${_REGION}'
       - '--platform'
       - 'managed'
+      - '--set-env-vars'
+      - 'CLOUDRUN_SERVICE_URL=${_SERVICE_URL}'
+      - '--add-cloudsql-instances'
+      - '${PROJECT_ID}:${_REGION}:${_INSTANCE_NAME}'
+      
 
 substitutions:
+
   _INSTANCE_NAME: main-mysql-db
   _REGION: asia-northeast1
   _SERVICE_NAME: polls-service
+  _SERVICE_URL: https://backend.thedemoapp.net
   _REPOSITORY_NAME:  backend-repository
   _SECRET_SETTINGS_NAME: django_settings
 
