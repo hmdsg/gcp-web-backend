@@ -81,6 +81,7 @@ steps:
       - 'CLOUDRUN_SERVICE_URL=$$SERVICE_URL'
       - '--add-cloudsql-instances'
       - '${PROJECT_ID}:${_REGION}:${_INSTANCE_NAME}'
+    secretEnv: ['SERVICE_URL']
 
 substitutions:
 
