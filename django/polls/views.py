@@ -12,8 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from django.http import HttpRequest, HttpResponse
+from django.http import HttpRequest, HttpResponse, Http404
 
 
 def index(request: HttpRequest) -> HttpResponse:
     return HttpResponse("Hello, world. You're at the polls index.")
+
+def sorry(request: HttpRequest) -> HttpResponse:
+    raise Http404("raise 404")
+    return HttpResponse("Sorry. This page is under consideration.")
