@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# venv
+django/venv/
+ 
+#c loud_sql_proxy
+django/cloud_sql_proxy
